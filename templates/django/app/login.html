@@ -1,0 +1,17 @@
+<html>
+	<head><title>login</title></head>
+	
+		
+	<body>
+		<form method="POST" action="{% url 'authsys:login' %}">{% csrf_token %}
+			{% if context %}
+			<a style="color:red;">{{ context }}</a>
+			{% endif %}
+			<label>Username</label>
+			<input type="text" name="username">
+			<label>Password</label>
+			<input type="password" name="password">
+			<input type="submit" value="login">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends './base.html' %}
+
+{% block login %}
+	<form action="/form_test/" method='post'>
+		<label for="username">Enter name:</label>
+		<input type="text" name="username" value="" id="username">
+		<input type="submit" value="Send" name="submit">
+	</form>
+{% endblock %}

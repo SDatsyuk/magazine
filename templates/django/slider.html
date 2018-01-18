@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="slider-wrapper">
+	<div class="prew-img">
+	{% for image in images %}
+		<div class="img-thumbs">
+			<a href="#"><img src="{{ image.image.url }}" alt="" class="img-responsive"  onmouseover="onHover(this.id)" id="{{ image.image.url }}"></a>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="full-img">
+		<img src="{{ main.image.url }}" id="productImage">
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div class="clearfix"></div>
+
+{% endblock %}

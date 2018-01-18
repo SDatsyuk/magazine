@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ product.title }}</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="product-image">
+				<img src="{{ image.image.url}}">
+			</div>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="product-col">
+				<div class="description">
+					<h3>Description</h3>
+					<p>{{ product.description }}<p>
+				</div>
+				<div class="add-to-cart">
+					<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span>Buy</button>
+
+					<button type="button" class="btn btn-light"><span class="glyphicon glyphicon-heart"></span>Add to wish list</button>
+					<button type="button" class="btn btn-light"><span class="glyphicon glyphicon-tree-conifer"></span>Compare</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{#<!-- Product propertys -->
+{% for property in propertys %}
+<p>{{ property.property.name }}: {{ property.value}}{{ property.unit_of_measurement}}
+{% endfor %}
+#}
+{% endblock %}

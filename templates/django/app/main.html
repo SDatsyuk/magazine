@@ -1,0 +1,22 @@
+<html>
+	<head><title>login</title></head>
+	
+		
+	<body>
+		{% if username %}
+		<h4>Hello {{ username }} </h4><a href="{% url 'logout' %}">Logout</a>
+		{% else %}
+		<form method="POST" action="{% url 'login' %}">{% csrf_token %}
+			{% if context %}
+			<a style="color:red;">{{ context }}</a>
+			{% endif %}
+			<label>Username</label>
+			<input type="text" name="username">
+			<label>Password</label>
+			<input type="password" name="password">
+			<input type="submit" value="login">
+		</form>
+		{% endif %}
+		<p>Wellcome to our web site!!!</p>
+	</body>
+</html>

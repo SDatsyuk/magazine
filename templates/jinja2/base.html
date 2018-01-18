@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Magazine</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ static('style.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ static('login.css') }}">
+
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 		<script src="{{ static('slider.js') }}"></script>
+ 		<script src="{{ static('login.js') }}"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		
+		{% include 'navbar.html' %}
+
+		{% block content %}{% endblock %}
+		{% block login %}{% endblock %}
+
+		{% include 'footer.html' %}
+		
+	</body>
+
+</html>
